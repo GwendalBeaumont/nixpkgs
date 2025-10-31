@@ -2,7 +2,7 @@
 # Do not edit!
 
 {
-  version = "2025.10.4";
+  version = "2025.11.0b2";
   components = {
     "3_day_blinds" =
       ps: with ps; [
@@ -56,6 +56,9 @@
     "actiontec" =
       ps: with ps; [
       ];
+    "actron_air" =
+      ps: with ps; [
+      ]; # missing inputs: actron-neo-api
     "adax" =
       ps: with ps; [
         adax
@@ -907,6 +910,7 @@
       ];
     "citybikes" =
       ps: with ps; [
+        python-citybikes
       ];
     "clementine" =
       ps: with ps; [
@@ -1463,6 +1467,7 @@
     "elevenlabs" =
       ps: with ps; [
         elevenlabs
+        sentence-stream
       ];
     "elgato" =
       ps: with ps; [
@@ -1758,12 +1763,19 @@
         psutil-home-assistant
         sqlalchemy
       ];
+    "fing" =
+      ps: with ps; [
+      ]; # missing inputs: fing_agent_api
     "fints" =
       ps: with ps; [
         fints
       ];
     "fire_tv" =
       ps: with ps; [
+      ];
+    "firefly_iii" =
+      ps: with ps; [
+        pyfirefly
       ];
     "fireservicerota" =
       ps: with ps; [
@@ -2375,14 +2387,18 @@
     "homeassistant_green" =
       ps: with ps; [
         aiohasupervisor
+        aiousbwatcher
         ha-silabs-firmware-client
         psutil-home-assistant
+        pyserial
         universal-silabs-flasher
       ];
     "homeassistant_hardware" =
       ps: with ps; [
         aiohasupervisor
+        aiousbwatcher
         ha-silabs-firmware-client
+        pyserial
         universal-silabs-flasher
       ];
     "homeassistant_sky_connect" =
@@ -2397,8 +2413,10 @@
     "homeassistant_yellow" =
       ps: with ps; [
         aiohasupervisor
+        aiousbwatcher
         ha-silabs-firmware-client
         psutil-home-assistant
+        pyserial
         universal-silabs-flasher
       ];
     "homee" =
@@ -2709,6 +2727,11 @@
     "indianamichiganpower" =
       ps: with ps; [
       ];
+    "inels" =
+      ps: with ps; [
+        aiohasupervisor
+        paho-mqtt
+      ]; # missing inputs: elkoep-aio-mqtt
     "influxdb" =
       ps: with ps; [
         influxdb
@@ -3425,6 +3448,10 @@
       ps: with ps; [
         luftdaten
       ];
+    "lunatone" =
+      ps: with ps; [
+        lunatone-rest-api-client
+      ];
     "lupusec" =
       ps: with ps; [
         lupupy
@@ -3618,6 +3645,10 @@
     "meteo_france" =
       ps: with ps; [
         meteofrance-api
+      ];
+    "meteo_lt" =
+      ps: with ps; [
+        meteo-lt-pkg
       ];
     "meteoalarm" =
       ps: with ps; [
@@ -4051,6 +4082,10 @@
       ps: with ps; [
         pynina
       ];
+    "nintendo_parental_controls" =
+      ps: with ps; [
+        pynintendoparental
+      ];
     "nissan_leaf" =
       ps: with ps; [
         pycarwings2
@@ -4222,7 +4257,7 @@
       ];
     "onewire" =
       ps: with ps; [
-        pyownet
+        aio-ownet
       ];
     "onkyo" =
       ps: with ps; [
@@ -4285,6 +4320,10 @@
     "openhome" =
       ps: with ps; [
         openhomedevice
+      ];
+    "openrgb" =
+      ps: with ps; [
+        openrgb-python
       ];
     "opensensemap" =
       ps: with ps; [
@@ -4581,7 +4620,6 @@
       ];
     "plum_lightpad" =
       ps: with ps; [
-        plumlightpad
       ];
     "pocketcasts" =
       ps: with ps; [
@@ -5631,6 +5669,10 @@
     "solaredge" =
       ps: with ps; [
         aiosolaredge
+        fnv-hash-fast
+        psutil-home-assistant
+        solaredge-web
+        sqlalchemy
         stringcase
       ];
     "solaredge_local" =
@@ -5797,6 +5839,9 @@
     "sun" =
       ps: with ps; [
       ];
+    "sunricher_dali_center" =
+      ps: with ps; [
+      ]; # missing inputs: PySrDaliGateway
     "sunweg" =
       ps: with ps; [
       ];
@@ -6582,10 +6627,6 @@
     "volvooncall" =
       ps: with ps; [
       ];
-    "vultr" =
-      ps: with ps; [
-        vultr
-      ];
     "w800rf32" =
       ps: with ps; [
         pyw800rf32
@@ -6615,10 +6656,6 @@
     "watergate" =
       ps: with ps; [
         watergate-local-api
-      ];
-    "watson_iot" =
-      ps: with ps; [
-        ibmiotf
       ];
     "watttime" =
       ps: with ps; [
@@ -7245,6 +7282,7 @@
     "filesize"
     "filter"
     "fints"
+    "firefly_iii"
     "fireservicerota"
     "firmata"
     "fitbit"
@@ -7473,6 +7511,7 @@
     "loqed"
     "lovelace"
     "luftdaten"
+    "lunatone"
     "lupusec"
     "lutron"
     "lutron_caseta"
@@ -7502,6 +7541,7 @@
     "met"
     "met_eireann"
     "meteo_france"
+    "meteo_lt"
     "meteoclimatic"
     "metoffice"
     "mfi"
@@ -7571,6 +7611,7 @@
     "nightscout"
     "niko_home_control"
     "nina"
+    "nintendo_parental_controls"
     "nmap_tracker"
     "nmbs"
     "no_ip"
@@ -7612,6 +7653,7 @@
     "opengarage"
     "openhardwaremonitor"
     "openhome"
+    "openrgb"
     "opensky"
     "opentherm_gw"
     "openuv"
@@ -7948,7 +7990,6 @@
     "volumio"
     "volvo"
     "volvooncall"
-    "vultr"
     "wake_on_lan"
     "wake_word"
     "wallbox"
