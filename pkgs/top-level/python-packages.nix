@@ -14863,6 +14863,8 @@ self: super: with self; {
 
   python-cinderclient = callPackage ../development/python-modules/python-cinderclient { };
 
+  python-citybikes = callPackage ../development/python-modules/python-citybikes { };
+
   python-clementine-remote = callPackage ../development/python-modules/python-clementine-remote { };
 
   python-codon-tables = callPackage ../development/python-modules/python-codon-tables { };
