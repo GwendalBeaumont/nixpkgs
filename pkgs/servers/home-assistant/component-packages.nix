@@ -58,7 +58,8 @@
       ];
     "actron_air" =
       ps: with ps; [
-      ]; # missing inputs: actron-neo-api
+        actron-neo-api
+      ];
     "adax" =
       ps: with ps; [
         adax
@@ -7043,6 +7044,7 @@
     "acaia"
     "accuweather"
     "acmeda"
+    "actron_air"
     "adax"
     "adguard"
     "advantage_air"
